@@ -27,15 +27,15 @@ def extract_dtx_code_build(plist_path):
     root = tree.getroot()
     isKeyExists = False
     is_before_key_dtx_code_build = False
-    ver = ""
+    version = ""
     for child in root[0]:
         if child.text == "DTXcodeBuild":
             is_before_key_dtx_code_build = True
             continue
         if is_before_key_dtx_code_build:
-            ver = child.text
+            version = child.text
             break
-    return ver
+    return version
 
 
 if __name__ == '__main__':
