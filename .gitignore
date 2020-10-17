@@ -1,2 +1,4 @@
 *.ipa
 *.zip
+.DS_Store
+Payload/
