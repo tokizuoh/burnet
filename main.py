@@ -1,3 +1,4 @@
+import os
 import sys
 import shutil
 import os.path
@@ -65,3 +66,7 @@ if __name__ == '__main__':
     plist_path = './Payload/{}.{}/Info.plist'.format(ipa_path[2:-4], "app")
     xcode_build_version = extract_dtx_code_build(plist_path)
     print(xcode_build_version)
+
+    # .zip, unzipに展開されたPayloadを削除
+    os.remove(zip_file_path)
+    shutil.rmtree('./Payload')
