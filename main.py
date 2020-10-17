@@ -37,6 +37,7 @@ def extract_dtx_code_build(plist_path):
             break
     return ver
 
+
 if __name__ == '__main__':
     # コマンドライン引数取得
     args = sys.argv
