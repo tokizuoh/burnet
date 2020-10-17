@@ -61,7 +61,7 @@ if __name__ == '__main__':
     with zipfile.ZipFile(zip_file_path) as ez:
         ez.extractall('./')
     
-    # extract
+    # Info.plist(xml)からipaをビルドしたXcodeのバージョンを抽出
     plist_path = './Payload/{}.{}/Info.plist'.format(ipa_path[2:-4], "app")
     xcode_build_version = extract_dtx_code_build(plist_path)
     print(xcode_build_version)
